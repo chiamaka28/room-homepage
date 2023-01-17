@@ -9,22 +9,19 @@ body{
     height: 100vh;
 }
 .slider-container{
-    /* height: 350px; */
-    /* width: 100%; */
     position: relative;
 }
 /* .slider-container.overlay{
   background: black;
   position: absolute;
+  top: 0;
   height: 100vh;
 } */
-.hero{
-    height: 320px;
-}
 .hero img{
     width: 100%;
-    height: 320px;
-    position: relative;
+    height: 100%;
+    /* object-fit: cover; */
+    
 }
 
 nav{
@@ -91,7 +88,7 @@ nav ul.show{
 }
 .slider-controller{
     position: absolute;
-    top:49.5%;
+    bottom:50.5%;
     right: 0;
     margin: 0;
     background: black;
@@ -104,51 +101,80 @@ nav ul.show{
     height:45px;
 }
 .slider-text{
-    padding:30px 52px;
+    padding:60px 40px;
 }
 .slider-text h2{
-    font-size: 30px;
+    font-size: 35px;
+    line-height: 3rem;
+}
+.slider-text p{
+    font-size: 15px;
+    padding: 15px 0;
+    line-height: 1.7rem;
+    color: hsl(0, 0%, 63%);
+   
+}
+.slider-text a{
+    color: hsl(0, 0%, 0%);
+    font-size: 16px;
+    text-transform:uppercase ;
+    letter-spacing: .9rem;
+    margin-top: 10px;
 }
 .hide{
     display: none;
 }
-/* .logo{
-    margin-left: 35%;
+.container{
+    padding: 40px;
 }
-
-
-n-one p,.section-two p,
-.section-three p{
-    font-size: 13px;
-    padding: 12px 0;
+.container h2{
+    font-size: 15px;
+    padding: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: .3rem;
+}
+.container p{
+    font-size: 15px;
     color: hsl(0, 0%, 63%);
+    line-height: 1.5rem;
+}
+
+@media only screen and (min-width:600px) {
+   .slider-container{
+    /* max-width:960px; */
+    /* max-height: 100vh; */
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    /* grid-template-rows: auto auto auto; */
+    /* padding:30px; */ 
+   }
+   .slider-image{
+     grid-column: 1/5;
+     grid-row: 1/3;
+   }
+   .slider-text{
+    grid-column: 5/7;
+    padding-left: 40px;
+   }    
+   article{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+   }
+   .dark-img{
+    grid-column: 1/3;
+   }
+   section{
+    grid-column: 3/6;
    
+   } 
+   .light-img{
+    grid-column: 6/8;
+   }
+   .slider-controller{
+    
+   }
 }
-
-
-.shop{
-    display: flex;
-}
-.b-section{
-    padding: 35px;
-}
-.b-section h2{
-    font-size: 20px;
-}
-.b-section p{
-    font-size: 13px;
-    padding: 6px 0;
-    color: hsl(0, 0%, 63%);
-}
-
-@media only screen and (min-width:420px) {
-    /* header{
-    background: url('/images/desktop-image-hero-1.jpg'); 
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-   
-    }
-} */
 /* @media only screen and (min-width:690px) {
     .toggle{
         display: none;
@@ -166,4 +192,4 @@ n-one p,.section-two p,
         top:15%;
     }
 
-}  */ */
+}  */ 
