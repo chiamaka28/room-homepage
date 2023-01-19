@@ -14,9 +14,20 @@ btn.addEventListener('click', function (){
 })
 
 
-let slide = 0;
-rightBtn.addEventListener('click', function(){
+function nextText (i, text, className){
+  if (i > 0){
+    text[i - 1].classList.remove('hide');
+  }
 
-  console.log('hurray');
-})
+  if (i < text.length - 1){
+    text[i + 1].classList.add('show')
+  }
+}
 
+// let slide = 0;
+rightBtn.addEventListener('click', nextText)
+
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  
+}

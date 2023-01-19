@@ -15,7 +15,7 @@ body {
   height: 100vh;
   font-family: 'League Spartan', sans-serif;
   overflow-x: hidden;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 
 }
 .hero img {
@@ -131,6 +131,9 @@ nav ul.show {
 }
 .hide {
   display: none;
+}
+.show{
+  display: block;
 }
 .link{
   display: flex;
