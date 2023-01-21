@@ -18,11 +18,14 @@ body {
   /* overflow-y: hidden; */
 
 }
-.hero img {
+/* .hero img {
+  min-width: 100%;
+  display: block;
+} */
+.hero img{
   min-width: 100%;
   display: block;
 }
-
 
 nav {
   position: absolute;
@@ -78,15 +81,10 @@ nav ul.show {
   transform: translateY(-5px);
 }
 
-.slider-image {
-  /* position: relative; */
-  /* height: 20rem; */
-}
-
 .slider-controller {
   position: absolute;
-  top: -45px;
-  right: 0;
+  top: -49px; 
+  right: -10px;
  
   display: flex;
   /* flex-direction: column;  */
@@ -132,9 +130,14 @@ nav ul.show {
 .hide {
   display: none;
 }
-.show{
-  display: block;
+.hidden{
+  display:none;
+
 }
+.show{
+  display: inline-block;
+}
+
 .link{
   display: flex;
 }
@@ -158,7 +161,7 @@ nav ul.show {
 .slider-container{
   display: grid;
   grid-template-columns:3fr 2fr;
-  grid-template-rows:1fr ;
+  /* grid-template-rows:1fr ; */
   overflow: hidden;
   
 }
@@ -170,9 +173,9 @@ article{
 article>img{
   min-height: 100%;
 }
-.hero img{
+.main-img{
   height: 34rem;
-  object-fit: cover;
+  object-fit: contain;
 }
 nav .toggle{
   display: none;
