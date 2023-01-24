@@ -60,31 +60,38 @@ nav .logo {
 }
 nav ul {
   color: black;
-  transform: translateY(-400px);
-  background: white;
-  display: flex;
+ 
+ 
+  display: flex; 
+  flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  
+  transform: translateY(-400px);
+  background: white;
   width: 100vw;
-  height: 100px;
-  position: absolute;
-  top: 0;
+  height: 70px;
   font-size: 15px;
   text-transform: lowercase;
+  position: absolute;
+  top: 0;
 }
+  
+
+.main-menu{
+} 
 nav ul li a {
   margin: 20px;
   color: black;
 }
+ 
 nav ul.show {
-  transform: translateY(-5px);
+  transform: translateY(0px);
 }
 
 .slider-controller {
   position: absolute;
   top: -49px; 
-  right: -10px;
+  right: -25px;
  
   display: flex;
   /* flex-direction: column;  */
@@ -140,6 +147,10 @@ nav ul.show {
 
 .link{
   display: flex;
+  
+}
+.link img{
+  margin: 10px;
 }
 .container {
   padding: 40px;
@@ -183,6 +194,7 @@ nav .toggle{
 nav ul{
   transform: translateY(0);
   background: transparent;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   margin-left: 100px;
@@ -193,10 +205,13 @@ nav ul li a{
   color: white;
 }
 .slider-controller{
-   /* left: 0; */
-  /* bottom: 0; */
-  position: relative;
+  left: 0;
+  top: 87.5%;
+  position: absolute;
   /* top: 0; */
+}
+.slider-controller button{
+  width: 40px;
 }
 .text{
   margin-top: 60px;

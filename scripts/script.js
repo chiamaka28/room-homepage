@@ -14,53 +14,86 @@ btn.addEventListener('click', function (){
 })
 
 
-let i = 0;
+// showSlides(i);
 
 
-// function changeSlide(i) {
-  img.forEach((img ) => {
-    //  img.classList.replace("show", "hidden");
-  });
+// function plusSlides(n){
+//   showSlides(i += n);
 // }
 
-// rightBtn.forEach(btn => {
-   rightBtn.addEventListener('click', () => {
-  //   i++;
-  //   img.forEach((img ) => {
-  //     img.classList.replace("hidden", "show");
-  //  });
-  
-  for (let i = 0; i < img.length; i++) {
-    img[i].classList.replace("hidden", "show");
-    console.log(i);
-    
-  }
-    // if (i === 3) {
-    //   i = 0;
-    //   changeSlide(i);
-    // } else {
-    //   changeSlide(i);
-    //   i++;
-    // }
-   });
-// });
+// function currentSlide(n){
+//   showSlides(i = n);
+// }
 
-// function previmg() {
-//   if (index === 0){
-//     index = 3;
+// function showSlides(n) {
+//   // let i;
+//   let slides = img;
+
+//   if (n > slides.length) {i = 1}
+//   if (n < 1) {i = slides.length}
+//   for (let i = 0;  i < slides.length; i++) {
+//     slides[i].style.display = "none";
+    
 //   }
-//   img[index % img.length].classList.replace('show', 'hidden');
-//   img[(index - 1) % img.length].classList.replace('hidden', 'show');
-//   text[index % text.length].classList.replace('show', 'hide');
-//   text[(index - 1) % text.length].classList.replace('hide', 'show');
-//   index--;
+//   slides[ i - 1].style.display = "block"
+// };
 
-//   // // for (index = 0; index < img.length; index--) {
-//   // //   img[index].classList.replace('show', 'hidden');
-//   // //   // img[slideIndex - 1].classList.replace('show', 'hidden');
-    
-//   // }
-// }
+// rightBtn.addEventListener('click', showSlides)
+
+
+//  let i = 0;
+
+//    rightBtn.addEventListener('click', () => {
+ 
+//   if (i > 1) {i = img.length - 1}
+//   if (i < 1) {i = img.length}
+
+//   for (let i = 0; i < img.length;  i++ ) {
+//       img[i].style.display = "none";
+//       console.log(img.length);
+//       console.log(i)
+     
+//   } 
+//   img[i - 1].style.display = "block";
+ 
+//    });
+
+
+let currentElementIndex = 0;
+rightBtn.addEventListener('click', () => {
+  // console.log('clicked')
+for (let i = 0; i < img.length; i++) {
+  if(i === currentElementIndex){
+    img[i].style.display = "none";
+  ;
+  console.log(i)
+  }else{
+    img[(i) % img.length].style.display = "block";
+   
+  }
+  
+}
+});
+
+
+ let index = 0;
+
+function previmg() {
+
+  if (index === 0){
+    index = img.length;
+   
+ }
+ 
+  img[index % img.length].classList.replace('show', 'hidden');
+  img[(index - 1) % img.length].classList.replace('hidden', 'show');
+  text[index % text.length].classList.replace('show', 'hide');
+  text[(index - 1) % text.length].classList.replace('hide', 'show');
+  index--;
+
+ 
+}
+  
 
 // function nextimg() {
 //   img[index % img.length].classList.replace('show', 'hidden');
@@ -70,6 +103,11 @@ let i = 0;
 //   index++;
 // }
 
-// leftBtn.addEventListener('click', previmg);
+leftBtn.addEventListener('click', previmg);
 // rightBtn.addEventListener('click', nextimg);
+
+
+
+
+
 
