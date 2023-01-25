@@ -18,12 +18,11 @@ body {
   /* overflow-y: hidden; */
 
 }
-/* .hero img {
+.slider-overlay .hero img {
   min-width: 100%;
-  display: block;
-} */
-.hero img{
-  min-width: 100%;
+  /* display: block; */
+}
+.main-img{
   display: block;
 }
 
@@ -60,8 +59,6 @@ nav .logo {
 }
 nav ul {
   color: black;
- 
- 
   display: flex; 
   flex-direction: row;
   align-items: center;
@@ -77,8 +74,7 @@ nav ul {
 }
   
 
-.main-menu{
-} 
+
 nav ul li a {
   margin: 20px;
   color: black;
@@ -90,8 +86,8 @@ nav ul.show {
 
 .slider-controller {
   position: absolute;
-  top: -49px; 
-  right: -25px;
+  top: -45px; 
+  right: 0;
  
   display: flex;
   /* flex-direction: column;  */
@@ -142,7 +138,7 @@ nav ul.show {
 
 }
 .show{
-  display: inline-block;
+  /* display: block; */
 }
 
 .link{
@@ -172,7 +168,6 @@ nav ul.show {
 .slider-container{
   display: grid;
   grid-template-columns:3fr 2fr;
-  /* grid-template-rows:1fr ; */
   overflow: hidden;
   
 }
@@ -187,6 +182,7 @@ article>img{
 .main-img{
   height: 34rem;
   object-fit: contain;
+  
 }
 nav .toggle{
   display: none;
@@ -206,7 +202,7 @@ nav ul li a{
 }
 .slider-controller{
   left: 0;
-  top: 87.5%;
+  top: 87%;
   position: absolute;
   /* top: 0; */
 }
